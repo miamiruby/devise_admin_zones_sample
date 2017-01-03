@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AdminApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <h1>Admin Zone Template</h1>
+    <h1>Welcome <%= current_admin.email %></h1>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <a href="/admins">Admin Home</a>
+    <a href="/admins/things">Things</a>
+    <a href="/admins/logout">Logout</a>
+
+    <%= yield %>
+    <br>
+    <a href="/admins/login">Admin Login</a>
+  </body>
+</html>
