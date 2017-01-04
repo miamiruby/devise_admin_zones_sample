@@ -11,6 +11,9 @@
   <body>
     <h1>User Zone Template</h1>
     <h1>Welcome <%= current_user.email %></h1>
+    <br>
+    <%= image_tag current_user.avatar.url(:thumb) %>
+    <br>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 

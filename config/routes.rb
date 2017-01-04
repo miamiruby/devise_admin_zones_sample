@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   # http://guides.rubyonrails.org/routing.html
 
   # User Zone
@@ -12,6 +13,9 @@ Rails.application.routes.draw do
       #unlock: 'unblock',
       #registration: 'register',
       sign_up: 'register'
+    },
+    :controllers => {
+      registrations: 'users/registrations'
   }
   authenticate :user do
     namespace :users do
